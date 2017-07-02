@@ -1,0 +1,28 @@
+//output:../views/navMenu.html
+nav.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid  
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.systitle(href='#') 
+        span Пані
+        span брат    
+      ul.nav.navbar-nav
+        li.active
+          a(href='#')
+            | Link 
+            span.sr-only (current)
+        li
+          a(href='#') Link          
+        li  
+          div.form-group.has-feedback.search            
+            input.form-control(type='name', name='name' placeholder='Пошук')
+            i.glyphicon.glyphicon-search.form-control-feedback 
+    ul.nav.navbar-nav.navbar-right
+        li
+          a(href="#")
+            span.glyphicon.glyphicon-log-out
+            span Вийти

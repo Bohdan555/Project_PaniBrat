@@ -1,0 +1,105 @@
+.searchBar {
+  margin-top: 5%;
+}
+.searchBox {
+  margin-top: 0;
+  background-color: #e8efee;
+}
+.searchLabel {
+  margin-top: 5px;
+}
+.search {
+  color: #06bda1;
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+  font-size: 100%;
+}
+.form-inline {
+  margin-top: 2%;
+  background-color: #e8efee;
+}
+select {
+  width: 400px;
+  align-self: center;
+  margin-top: 7px;
+}
+.keywords {
+  margin-top: 4px;
+}
+.searchRow {
+  border: 0;
+  clear: both;
+  display: block;
+  background-color: #000000;
+  height: 1px;
+}
+.buttonSearch {
+  background-color: #50AF50;
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 20px;
+  cursor: pointer;
+  float: right;
+}
+.offerDesc {
+  margin-left: 25%;
+  resize: none;
+  border: none;
+  background-color: #e8efee;
+  float: left;
+  display: inline-block;
+}
+.offerInfo {
+  width: 11%;
+  float: left;
+  margin-left: 11%;
+  display: inline-block;
+}
+.offerPhoto {
+  width: 11%;
+  float: left;
+  margin-left: 6%;
+  display: inline-block;
+}
+.authorPhoto {
+  width: 11%;
+  float: right;
+  margin-right: 10%;
+  display: block;
+}
+.form-left {
+  float: left;
+  height: 200px;
+  width: 65%;
+  background-color: #fefefe;
+}
+.form-right {
+  float: right;
+  height: 200px;
+  width: 25%;
+  background-color: #fefefe;
+}
+.author {
+  color: #06bda1;
+  margin-right: 5%;
+  font-weight: bold;
+  display: block;
+  float: right;
+  width: auto;
+  font-size: 100%;
+}
+.itemTitle {
+  color: #06bda1;
+  margin-left: 5%;
+  display: block;
+  margin-top: 0px;
+  font-weight: bold;
+  width: auto;
+  font-size: 100%;
+}

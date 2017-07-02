@@ -1,0 +1,58 @@
+
+<div ng-controller="offerSearch" class="container searchBar">
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 searchBox">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="row">
+            <div class="header-ratings">
+              <h3> Пошук пропозицій</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="form-group">
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="category" class="searchLabel search"> Категорія </label>
+            <select id="category" ng-model="selCat" ng-change="categorySel()">
+              <option ng-repeat="x in offerCat" value="{{x}}">{{x}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subcategory" class="search searchLabel"> Підкатегорія </label>
+            <select id="subcategory" ng-model="selSubCat">
+              <option ng-repeat="x in offerSubcatFiltered" value="{{x}}">{{x}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="keys" class="search searchLabel"> Ключові слова </label>
+            <input id="keys" type="text" ng-model="keys" class="keywords"/>
+            <button type="button" ng-click="setFilterz()" class="buttonSearch">Знайти</button>
+          </div>
+        </form>
+        <ul ng-repeat="x in offerList" ng-show="viewSearch(x, Filter, subFilter)" class="list-unstyled">
+          <form>
+            <li>
+              <div class="form-group">
+                <div class="form-left">
+                  <label class="itemTitle">{{x.header}}</label><br/><br/>
+                  <div class="offerPhoto"><img src="{{x.image}}" alt="Cinque Terre" class="img-circle"/></div>
+                  <div class="offerInfo">
+                    <textarea rows="5" cols="50" disabled="" class="offerDesc">{{x.description}}</textarea>
+                    <textarea rows="1" cols="50" disabled="" class="offerDesc">{{x.date}}</textarea>
+                  </div>
+                </div>
+                <div class="form-right">               <br/><br/><br/><br/><br/><br/>
+                  <button type="button" ng-click="sendOID(x._id.$oid)" class="buttonSearch">Замовити</button>
+                </div>
+              </div>
+              <hr class="searchRow"/>
+            </li>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

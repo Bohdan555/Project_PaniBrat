@@ -1,0 +1,52 @@
+
+<div class="container header-deals deals">
+  <div class="row">
+    <div>
+      <ul class="list-inline">
+        <li><a href="#!deals/inProgress"><span>Виконуються</span></a></li>
+        <li><a href=""><span>Виконані</span></a></li>
+        <li><a href=""><span>Пропозиції від Вас</span></a></li>
+        <li><a href="#!deals/dealsForYou"><span>Пропозиції для Вас</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div ng-controller="deals" class="container deals dealsInfo col-md-10"> 
+  <div ng-repeat="deal in Deals" class="row">
+    <div class="yourOffer"> 
+      <div class="header">   
+        <h4>{{deal.header}}</h4>
+      </div>
+      <div class="body">       
+        <p>{{deal.description}}</p>
+      </div>
+    </div>
+    <div class="infoAboutDeal">
+      <div class="header">
+        <ul class="list-unstyled">
+          <li>              
+            <h4>Угоду запропоновано:</h4>
+            <p>{{deal.date}}           </p>
+          </li>
+          <li>                       <img src="pictures/arrow.png"/></li>
+          <li>          
+            <div class="body">    
+              <button class="btn dealBtn"><span>Скасувати</span></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="offerForYou">                     
+      <div class="header">   
+        <h4>Піаніно "Україна"        </h4>
+      </div>
+      <div class="body">
+        <p>))))))))))))))))))))))        </p>
+      </div>
+      <div class="accept">   
+        <button class="btn dealBtn"><span>Виконано   </span></button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+//output:../views/search.html
+.container.searchBar(ng-controller='offerSearch')
+  .row
+    .col-md-11.col-md-offset-1.searchBox
+      .row
+        .col-md-11
+          .row
+            .header-ratings
+              h3  Пошук пропозицій
+      hr
+      .form-group
+        form.form-inline
+          .form-group
+            label.searchLabel.search(for='category')  Категорія 
+            select#category(ng-model='selCat', ng-change='categorySel()')
+              option(ng-repeat='x in offerCat', value='{{x}}') {{x}}
+          .form-group
+            label.search.searchLabel(for='subcategory')  Підкатегорія 
+            select#subcategory(ng-model='selSubCat')
+              option(ng-repeat='x in offerSubcatFiltered', value='{{x}}') {{x}}
+          .form-group
+            label.search.searchLabel(for='keys')  Ключові слова 
+            input#keys.keywords(type='text', ng-model='keys')
+            button.buttonSearch(type='button', ng-click='setFilterz()') Знайти
+        ul.list-unstyled(ng-repeat='x in offerList', ng-show='viewSearch(x, Filter, subFilter)')
+          form
+            li
+              .form-group
+                .form-left
+                  label.itemTitle {{x.header}}
+                  br
+                  br
+                  .offerPhoto
+                    img.img-circle(src='{{x.image}}', alt='Cinque Terre')
+                  .offerInfo
+                    textarea.offerDesc(rows='5', cols='50', disabled='') {{x.description}}
+                    textarea.offerDesc(rows='1', cols='50', disabled='') {{x.date}}
+                .form-right                
+                  br
+                  br                  
+                  br
+                  br
+                  br
+                  br
+                  button.buttonSearch(type='button', ng-click='sendOID(x._id.$oid)') Замовити
+              hr.searchRow

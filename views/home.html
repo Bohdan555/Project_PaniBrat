@@ -1,0 +1,120 @@
+
+<div ng-controller="individual" class="container first-container">
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 profile-header">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="photo"><img src="https://0ff8a7a9.ngrok.io{{user_individual.user_photo}}" alt="Cinque Terre" class="img-circle"/></div>
+          <div class="profile-info">
+            <div class="header-info">
+              <h2>{{user_individual.individual_first_name}} {{user_individual.individual_middle_name}} {{user_individual.individual_surname}}</h2>
+            </div>
+            <div class="main-info">
+              <h5>Дата народження : {{user_individual.individual_birth_date | date:'dd.MM.yyyy'}}</h5>
+              <h5>Місто : {{user_individual.user_city}}</h5>              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 edit">
+          <div><a href="" ng-click="open('lg')"><img src="pictures/Edit_small.png" alt=""/></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-controller="ratings" class="container">
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 ratings">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="row">
+            <div class="header-ratings">
+              <h3>Рейтинг</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 edit">
+          <div style="float:right;margin-right:-10px;" class="row">
+            <div><a href="" ng-click="open('sm')"><img src="pictures/Plus_small.png" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="form-group">
+        <ul ng-repeat="x in responses" class="list-unstyled">
+          <li><font color="#FFA500">{{x.yellows}}</font><font color="#D3D3D3">{{x.grays}}</font><font color="#06bda1"> — відгук користувача {{x.sender}} щодо {{x.waretask}}</font><br/>              {{x.response}}<br/><font color="#D3D3D3">{{x.date | date:'dd.MM.yyyy'}}</font>
+            <hr/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div ng-controller="createOrChangePorf" class="col-md-11 col-md-offset-1 portfolios">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="row">
+            <div class="header-offers">
+              <h3>Портфоліо робіт</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 edit">
+          <div class="row">
+            <div><a href="" ng-click="edit('lg')"><img src="pictures/Edit_small.png" alt=""/></a></div>
+            <div><a href="" ng-click="open(&quot;lg&quot;)"><img src="pictures/Plus_small.png" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="photos">
+            <slick ng-if="resetSlick" infinite="true" speed="300" slides-to-scroll="1" slides-to-show="7">
+              <div ng-repeat="image in images">                           <img ng-src="https://0ff8a7a9.ngrok.io{{image.url}}"/><span>{{image.description}}        </span></div>
+            </slick>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="myOffers" ng-controller="offersList" class="container">
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 offers">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="row">
+            <div class="header-offers">
+              <h3>Мої пропозиції</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 edit">
+          <div class="row">
+            <div><a href=""><img src="pictures/Edit_small.png" alt=""/></a></div>
+            <div><a href="" ng-click="open(&quot;lg&quot;)"><img src="pictures/Plus_small.png" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="offersList">
+            <div ng-repeat="offer in offers  | startFrom:(currentPage-1)*pageSize | limitTo : pageSize" class="media">
+              <div class="media-left"><a href="#">
+                  <div><img src="{{offer.image}}" class="media-object"/></div></a></div>
+              <div class="media-body">
+                <h4 class="media-heading">{{offer.header}}</h4><span>{{offer.description}}</span>
+              </div>
+              <hr/>
+            </div>
+            <div class="paginat">
+              <ul uib-pagination="uib-pagination" rotate="true" force-ellipses="true" previous-text="&lt;" next-text="&gt;" total-items="offers.length" ng-model="currentPage" items-per-page="pageSize" class="myPagination">   </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

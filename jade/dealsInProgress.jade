@@ -1,0 +1,44 @@
+//output:../views/dealsInProgress.html
+.container.header-deals.deals
+  .row
+    div
+      ul.list-inline
+        li
+          a(href="#!deals/inProgress")
+            span Виконуються
+        li
+          a(href="")
+            span Виконані
+        li
+          a(href="")
+            span Пропозиції від Вас
+        li
+          a(href="#!deals/dealsForYou")
+            span Пропозиції для Вас
+div.container.deals.dealsInfo.col-md-10(ng-controller='deals')
+  div.row(ng-repeat='i in mas')
+    div.yourOffer
+      div.header
+        h4 Піаніно "Україна"
+      div.body
+        p asasdasdasdasdasdasdasdasasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
+    div.infoAboutDeal
+      div.header
+        ul.list-unstyled
+          li
+              h4 Угоду запропоновано:
+              p 15 травня 2017 року
+          li
+              img(src='pictures/arrow.png')
+          li
+            div.body
+                button.btn.dealBtn
+                      span Скасувати
+    div.offerForYou
+      div.header
+          h4 Піаніно "Україна"
+      div.body
+          p ))))))))))))))))))))))
+      div.accept
+          button.btn.dealBtn
+            span Отримано

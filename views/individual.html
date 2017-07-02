@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <h2>Профіль</h2>
+    <form id="edit_profile" class="individual-edit col-md-8">
+      <div drop-zone ng-model="data.upload" class="one">
+        <p>Drop files here <span>(or click to upload)</span></p>
+      </div>
+      <div class="portfImage">
+        <img ng-repeat="file in data.upload" src="{{file.data}}" />
+      </div>
+      <div class="form-group">
+          <label for="individual_surname">Прізвище:</label>
+          <input type="text" class="form-control" id="individual_surname" name="individual_surname"  ng-model="user_individual.individual_surname" placeholder="Введіть прізвище" >
+      </div>
+      <div class="form-group">
+          <label for="individual_first_name">Ім'я:</label>
+          <input type="text" class="form-control" id="individual_first_name" name="individual_first_name" ng-model="user_individual.individual_first_name" placeholder="Введіть ім'я:">
+      </div>
+      <div class="form-group">
+          <label for="individual_middle_name">По&nbsp;батькові:</label>
+          <input type="text" class="form-control" id="individual_middle_name" name="individual_middle_name" ng-model="user_individual.individual_middle_name" placeholder="Введіть по батькові">
+      </div>
+      <label>Стать:&nbsp;</label>
+      <div class="radio-inline">
+          <label><input type="radio" ng-model="user_individual.ID_individual_sex" name="individual_sex" value="0">Чоловіча</label>
+      </div>
+      <div class="radio-inline">
+          <label><input type="radio" ng-model="user_individual.ID_individual_sex" name="individual_sex" value="1">Жіноча</label>
+      </div>
+      <div class="form-group">
+          <label for="user_city">Місто&nbsp;проживання:</label>
+          <input type="text" class="form-control" id="user_city" name="user_city" ng-model="user_individual.user_city" placeholder="Введіть місто проживання">
+      </div>
+      <div class="form-group">
+          <label for="individual_birth_date">Дата&nbsp;народження:</label>
+          <input type="date" class="form-control" id="individual_birth_date" name="individual_birth_date" ng-model="user_individual.individual_birth_date" placeholder="Введіть дату народження">
+      </div>
+      <div class="form-group">
+          <label for="user_phone_number">Номер&nbsp;телефону:</label>
+          <input type="text" class="form-control" id="user_phone_number" name="user_phone_number" placeholder="+38XXXXXXXXXX" maxlength="13" pattern="\++[\d]{12}"required="required" ng-model="user_individual.user_phone_number" data-fv-notempty-message="Заповніть це поле" >
+      </div>
+      <button class="btn btn-primary" ng-click="getResponse()">Зберегти</button>
+    </form>
+  </row>
+</div>

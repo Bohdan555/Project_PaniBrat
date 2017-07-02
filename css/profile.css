@@ -1,0 +1,365 @@
+.navbar {
+  border-radius: 0px;
+}
+.first-container {
+  margin-top: 5%;
+}
+.myLabel1 {
+  margin-left: 2%;
+}
+.portfImage {
+  display: inline-block;
+}
+.myGroup {
+  margin-left: 11%;
+}
+.search {
+  margin-bottom: 4% !important;
+}
+.side-bar {
+  width: 12%;
+  background-color: black;
+  height: 87%;
+  position: fixed;
+}
+.imageDescr {
+  padding-left: 5%;
+}
+.magnifier {
+  position: relative;
+  top: 3px;
+  left: 89.5%;
+}
+.divForImage {
+  padding-left: 5%;
+  text-align: center;
+}
+.addPortfolioHeader {
+  padding-left: 0;
+}
+.myPagination {
+  font-family: Helvetica;
+}
+.ratings {
+  margin-top: 2%;
+  background-color: #e8efee;
+}
+.profile-header {
+  background-color: #e8efee;
+}
+.profile-info {
+  margin-left: 28%;
+}
+.header-offers {
+  margin-bottom: 4%;
+}
+.offers {
+  margin-top: 2%;
+  background-color: #e8efee;
+}
+.photos {
+  height: 19%;
+}
+.portfolios {
+  margin-top: 2%;
+  background-color: #e8efee;
+}
+.slick-list {
+  margin-left: 20px !important;
+}
+.slick-slide {
+  padding-left: 20px !important;
+}
+.slick-prev {
+  top: 31% !important;
+  left: -1% !important;
+}
+.slick-next {
+  top: 31% !important;
+  right: -1% !important;
+}
+.paginat {
+  text-align: center;
+}
+.media hr {
+  border-top: 2px solid #12caae;
+}
+.media-left img {
+  height: 25%;
+}
+.edit div {
+  display: inline-block;
+  margin-top: 7%;
+}
+.nav li:nth-child(3) {
+  padding-top: 3%;
+}
+.imagePlace div {
+  height: 30%;
+  border: 1px dotted grey;
+}
+.imageDescr h2 {
+  color: green;
+}
+.addPortfolioHeader h3 {
+  color: #12caae;
+}
+.addPortfolioButtons span {
+  color: black;
+  font-weight: 700;
+}
+.addPortfolioButtons {
+  padding-left: 2%;
+}
+.imageDescr textarea {
+  resize: none;
+}
+.addPortfolioButtons button {
+  background-color: #12caae;
+}
+.imageInfo div {
+  width: 57%;
+  margin-top: 4%;
+}
+.header-offers h3 {
+  font-weight: 600;
+  color: #12caae;
+}
+.portfolios span {
+  display: inline-block;
+  width: 62%;
+  height: 33%;
+  overflow: hidden;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: black !important;
+}
+.profile-info .main-info h5 {
+  font-weight: 600;
+  color: #6c7c7a;
+}
+.systitle span:nth-of-type(1) {
+  color: #12caae;
+}
+form.individual-edit {
+  background-color: #ffffff;
+  margin: 15px;
+}
+.systitle span:nth-of-type(2) {
+  color: #aef4e9;
+}
+.profile-header .photo {
+  width: 11%;
+  float: left;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+.photos img {
+  height: 62%;
+}
+.side-bar ul {
+  padding-left: 5%;
+}
+.header-ratings h3 {
+  color: #12caae;
+  font-weight: 600;
+}
+.hideDropZone {
+  display: none;
+}
+.header-portfolios h3 {
+  color: #12caae;
+  font-weight: 600;
+  margin-bottom: 4%;
+}
+.one {
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: whitesmoke;
+  border-radius: 4px;
+  font: caption;
+  text-align: center;
+  border: 1px dotted silver;
+  box-sizing: border-box;
+}
+.one p {
+  padding-top: 16px;
+  font-size: 16px;
+}
+.one span {
+  display: block;
+  font-size: 10px;
+}
+.one img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+.one input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 9999px;
+  opacity: 0;
+  cursor: pointer;
+}
+.two {
+  display: block;
+  margin: 30px;
+}
+.two span {
+  display: none;
+}
+.two.drop-zone span {
+  display: block;
+  font-size: 10px;
+}
+pre {
+  margin: 30px;
+  font-size: 10px;
+}
+.addPortfolioButtons li:nth-child(1) {
+  padding-left: 8.5%;
+}
+.addPortfolioButtons li:nth-child(2) {
+  float: right;
+  padding-right: 1.2%;
+}
+.profile-header .photo img {
+  width: 100%;
+  height: 15%;
+}
+.edit div img {
+  width: 60%;
+}
+.side-bar ul li {
+  padding-bottom: 5%;
+}
+.side-bar ul li a {
+  text-decoration: none;
+}
+.side-bar ul li span {
+  font-weight: 600;
+  color: #12caae;
+}
+form.ratings-edit {
+  background-color: #ffffff;
+  width: 272px;
+  height: 380px;
+  margin: auto;
+}
+form.individual-edit {
+  background-color: #ffffff;
+  width: 800px;
+  margin: 15px;
+}
+#reviewStars-input input:checked label,
+#reviewStars-input label,
+#reviewStars-input label:hover,
+#reviewStars-input label:hover label {
+  background: url('http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png') no-repeat;
+}
+#reviewStars-input {
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  float: left;
+}
+#reviewStars-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  width: 43px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+#reviewStars-input input:checked ~ label {
+  background-position: 0 -40px;
+  height: 50px;
+  width: 43px;
+}
+#reviewStars-input label {
+  background-position: 0 0;
+  height: 40px;
+  width: 43px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+#reviewStars-input label:hover,
+#reviewStars-input label:hover ~ label {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 43px;
+}
+#reviewStars-input #star-0 {
+  left: 0px;
+}
+#reviewStars-input #star-1 {
+  left: 53px;
+}
+#reviewStars-input #star-2 {
+  left: 106px;
+}
+#reviewStars-input #star-3 {
+  left: 159px;
+}
+#reviewStars-input #star-4 {
+  left: 212px;
+}
+#reviewStars-input #star-5 {
+  left: 265px;
+}
+textarea {
+  margin: 5px;
+  resize: none;
+}
+label {
+  color: #06bda1;
+  font-weight: bold;
+  display: block;
+  width: 150px;
+  float: left;
+  font-size: 150%;
+}
+#button-yes {
+  background-color: #50AF50;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: left;
+}
+#button-no {
+  background-color: #AF5050;
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+}

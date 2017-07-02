@@ -1,0 +1,99 @@
+//output:../views/home.html
+.container.first-container(ng-controller='individual')
+  .row
+    .col-md-11.col-md-offset-1.profile-header
+      .row
+        .col-md-11
+          .photo
+            img.img-circle(src='https://0ff8a7a9.ngrok.io{{user_individual.user_photo}}', alt='Cinque Terre')
+          .profile-info
+            .header-info
+              h2
+                | {{user_individual.individual_first_name}} {{user_individual.individual_middle_name}} {{user_individual.individual_surname}}
+            .main-info
+              h5 Дата народження : {{user_individual.individual_birth_date | date:'dd.MM.yyyy'}}
+              h5 Місто : {{user_individual.ID_user_city}}
+              h5
+                | Освіта : {{user_individual.ID_individual_education_place}} ({{user_individual.ID_individual_graduation_year}})
+        .col-md-1.edit
+          div
+            a(href='', ng-click="open('lg')")
+              img(src='pictures/Edit_small.png', alt='')
+.container(ng-controller='ratings')
+    .row
+        .col-md-11.col-md-offset-1.ratings
+          .row
+            .col-md-11
+              .row
+                .header-ratings
+                  h3 Рейтинг
+            .col-md-1.edit
+              .row(style='float:right;margin-right:-10px;')
+                div
+                  a(href='', ng-click="open('sm')")
+                    img(src='pictures/Plus_small.png', alt='')
+          hr
+          .form-group
+            ul.list-unstyled(ng-repeat='x in responses')
+              li
+                font(color='#FFA500') {{x.yellows}}
+                font(color='#D3D3D3') {{x.grays}}
+                font(color='#06bda1')  — відгук користувача {{x.sender}} щодо {{x.waretask}}
+                br
+                |               {{x.response}}
+                br
+                font(color='#D3D3D3') {{x.date | date:'dd.MM.yyyy'}}
+                hr        
+.container
+  .row      
+    .col-md-11.col-md-offset-1.portfolios(ng-controller='createOrChangePorf')
+      .row
+        .col-md-11
+          .row
+            div.header-offers
+              h3 Портфоліо робіт
+        .col-md-1.edit
+          .row
+            div
+              a(href="",ng-click="edit('lg')")
+                img(src="pictures/Edit_small.png", alt="")
+            div
+              a(href="",ng-click='open("lg")')
+                img(src="pictures/Plus_small.png", alt="") 
+      .row
+        .col-md-12
+          div.photos     
+            slick(ng-if='resetSlick' infinite='true',speed='300',slides-to-scroll='1',slides-to-show='7')
+              div(ng-repeat='image in images')                            
+                  img(ng-src='https://0ff8a7a9.ngrok.io{{image.url}}')
+                  span{{image.description}}        
+.container#myOffers(ng-controller='offersList')
+  .row      
+    .col-md-11.col-md-offset-1.offers
+      .row
+        .col-md-11
+          .row
+            div.header-offers
+              h3 Мої пропозиції
+        .col-md-1.edit
+          .row
+            div
+              a(href="")
+                img(src="pictures/Edit_small.png", alt="")
+            div
+              a(href="" ng-click='open("lg")')
+                img(src="pictures/Plus_small.png", alt="") 
+      .row
+        .col-md-12          
+          div.offersList
+            div.media(ng-repeat='offer in offers  | startFrom:(currentPage-1)*pageSize | limitTo : pageSize')
+              div.media-left
+                a(href='#')
+                 div
+                  img.media-object(src='{{offer.image}}')                   
+              div.media-body
+                h4.media-heading {{offer.header}}
+                span {{offer.description}}
+              hr
+            div.paginat
+              ul.myPagination(uib-pagination, rotate='true',force-ellipses='true',previous-text="<", next-text=">",total-items='offers.length',ng-model='currentPage',items-per-page='pageSize')    
