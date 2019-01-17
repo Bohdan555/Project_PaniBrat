@@ -1,0 +1,86 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+
+### Routes
+
+### Get individual's info [GET]
+
+/loadindividual
+
+Load individual's info. Actually it's only one testing user
+
++ Response 201 (application/json)
+
+Structure is unknown for now. Check by yourself
+
+### Get all available offers [GET]
+/loadofferlist
+
+You can get all available offers for testing.
+
++ Response 201 (application/json)
+
+Structure is unknown for now. Check by yourself
+
+### Get all categories for offers [GET]
+
+/loadoffercat
+
+You can get all categories which all offers are sorted by
+
++ Response 201 (application/json)
+
+Structure is unknown for now. Check by yourself
+
+### Get all subcategories for offers [GET]
+
+/loadoffersubcat
+
+You can get all subcategories which all suboffer are sorted by
+
++ Response 201 (application/json)
+
+Structure is unknown for now. Check by yourself
+
+### Save feedback [POST]
+
+/savefeedback
+
+You can save user's feedback about another user's action on the platform
+
++ Request 201
+
+            {
+                sender:string,
+                receiver:string,
+                waretask:string,
+                stars:string,
+                response:string,
+                date:Date
+            }
+
++ Response 200
+
+### Load feedback [GET]
+
+/loadfeedback
+
+You can get user's feedback about another user's action on the platform
+
++ Response 201 (application/json)
+
+Structure is unknown for now. Check by yourself
+
+### Save individual's portfolio picture [POST]
+
+/saveportfolio
+
++ Request 201 (application/json)
+    
+        {
+            data: object
+        }
+
++ Response 200
+Structure is unknown for now. Check by yourself
